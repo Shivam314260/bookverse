@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Status | BookVerse</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='order_status.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <h1 class="logo">📚 BookVerse</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/orders">My Orders</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="order-status-section">
+    <h2>Order Status</h2>
+
+    <div class="order-card">
+
+        <!-- Order Info -->
+        <div class="order-info">
+            <p><strong>Order ID:</strong> #BV10234</p>
+            <p><strong>Order Date:</strong> 02 Feb 2026</p>
+            <p><strong>Total Amount:</strong> ₹758</p>
+        </div>
+
+        <!-- Status Timeline -->
+        <div class="status-timeline">
+
+            <div class="status-step completed">
+                <i class="fas fa-credit-card"></i>
+                <span>Payment Done</span>
+            </div>
+
+            <div class="status-step completed">
+                <i class="fas fa-box"></i>
+                <span>Order Placed</span>
+            </div>
+
+            <div class="status-step active">
+                <i class="fas fa-truck"></i>
+                <span>Shipped</span>
+            </div>
+
+            <div class="status-step">
+                <i class="fas fa-home"></i>
+                <span>Delivered</span>
+            </div>
+
+        </div>
+
+        <!-- Order Items -->
+        <div class="order-items">
+            <h3>Items in this order</h3>
+
+            <div class="order-item">
+                <span>Atomic Habits</span>
+                <span>₹359</span>
+            </div>
+
+            <div class="order-item">
+                <span>The Alchemist</span>
+                <span>₹399</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 BookVerse. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

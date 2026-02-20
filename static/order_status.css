@@ -1,0 +1,112 @@
+/* Order Status Section */
+.order-status-section {
+    padding: 60px 40px;
+    background: #f8f9fa;
+}
+
+.order-status-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Order Card */
+.order-card {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Order Info */
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+/* Timeline */
+.status-timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.status-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: #e5e7eb;
+    z-index: 0;
+}
+
+.status-step {
+    position: relative;
+    z-index: 1;
+    background: #e5e7eb;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-step i {
+    font-size: 24px;
+}
+
+/* Completed / Active */
+.status-step.completed {
+    background: #22c55e;
+    color: white;
+}
+
+.status-step.active {
+    background: #2563eb;
+    color: white;
+}
+
+/* Order Items */
+.order-items h3 {
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .status-timeline {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .status-timeline::before {
+        display: none;
+    }
+
+    .status-step {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px;
+    }
+}

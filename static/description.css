@@ -1,0 +1,309 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 85%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Book Section */
+.book-section {
+    display: flex;
+    gap: 40px;
+}
+
+.book-image img {
+    width: 260px;
+    border-radius: 8px;
+}
+
+.book-title {
+    margin-bottom: 5px;
+}
+
+.author-name {
+    color: #007185;
+    font-size: 15px;
+}
+
+.rating {
+    color: #f08804;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.rating-count {
+    color: #555;
+    font-size: 14px;
+}
+
+.description {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.price {
+    font-size: 26px;
+    color: #b12704;
+    font-weight: 600;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+.buy-btn {
+    background-color: #ffa41c;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.buy-btn:hover {
+    background-color: #f08804;
+}
+
+/* Reviews */
+.reviews {
+    margin-top: 50px;
+}
+
+.review-card {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+}
+
+.review-rating {
+    color: #f08804;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.review-title {
+    font-weight: 600;
+}
+
+.review-meta {
+    font-size: 13px;
+    color: #555;
+}
+
+.verified {
+    color: #c45500;
+    font-weight: 500;
+}
+
+.review-text {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Other Books */
+.other-books {
+    margin-top: 50px;
+}
+
+.book-list {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+.book-card {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    width: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.book-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.book-card p {
+    margin-top: 12px;
+    font-weight: 500;
+    min-height: 40px;
+}
+
+
+.quantity {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity label {
+    font-weight: 500;
+}
+
+.quantity input {
+    width: 60px;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+/* ---------- Reviews Section ---------- */
+
+.reviews {
+    margin-top: 60px;
+    
+}
+
+.reviews h2 {
+    margin-bottom: 20px;
+}
+
+/* Review Card */
+.review-card {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width:97%;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.review-rating {
+    color: #ffa41c;
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+.review-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.review-meta {
+    font-size: 13px;
+    color: #777;
+}
+
+.verified {
+    color: #007600;
+    font-weight: 600;
+}
+
+.review-text {
+    margin-top: 12px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* ---------- Add Comment Section ---------- */
+
+.add-comment {
+    margin-top: 60px;
+    padding: 30px;
+    padding-right:40px;
+    background: linear-gradient(180deg, #ffffff, #fafafa);
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    max-width: 100%;
+}
+
+.add-comment h2 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+.comment-form {
+    display: grid;
+    gap: 18px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    ;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #d5d5d5;
+    transition: border 0.2s, box-shadow 0.2s;
+    margin:10px 0 0px 0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ffa41c;
+    box-shadow: 0 0 0 3px rgba(255,164,28,0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+    align-self: flex-start;
+    background: linear-gradient(180deg, #ffd814, #f7ca00);
+    border: 1px solid #f2c200;
+    padding: 12px 26px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.submit-btn:active {
+    transform: scale(0.97);
+}

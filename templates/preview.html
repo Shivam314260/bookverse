@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }} - Free Preview</title>
+</head>
+<body>
+
+<h1>{{ title }} - Free Sample</h1>
+
+<iframe src="{{ url_for('static', filename=preview_file) }}" 
+        width="100%" 
+        height="600px">
+</iframe>
+
+<br><br>
+<a href="{{ url_for('description', book_id=request.view_args.book_id) }}">
+    <button>Back to Book</button>
+</a>
+
+</body>
+</html>

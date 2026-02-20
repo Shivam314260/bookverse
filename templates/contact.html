@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | BookVerse</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <h1 class="logo">📚 BookVerse</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Bestsellers</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Contact Hero -->
+<section class="contact-hero">
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you. Ask us anything about books!</p>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="contact-container">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h3>📍 Contact Information</h3>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>support@bookverse.com</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+91 98765 43210</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-location-dot"></i>
+                <span>Bangalore, India</span>
+            </div>
+
+            <div class="socials">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>✉ Send Us a Message</h3>
+
+            <form method="post">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer" style="text-align: center; padding: 20px; background-color: #222; color: #fff;">
+    <p>© 2026 BookVerse. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

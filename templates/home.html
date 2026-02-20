@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookVerse | Online Book Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <h1 class="logo">📚 BookVerse</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="/order_status">order status</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact</a>
+        <a>{{ session.get("user_name", "Guest") }}</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Discover Your Next Favorite Book</h2>
+    <p>Bestsellers • New Arrivals • Trending Reads</p>
+    <button>Shop Now</button>
+</section>
+
+<!-- Section Template -->
+<section class="section">
+    <h2>🔥 Bestsellers</h2>
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71XEsXS5RlL._UF894,1000_QL80_.jpg" alt="">
+            <h3>The Alchemist</h3>
+            <p>₹399</p>
+        </div>
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <h3>Atomic Habits</h3>
+            <p>₹499</p>
+        </div>
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <h3>Rich Dad Poor Dad</h3>
+            <p>₹350</p>
+        </div>
+    </div>
+</section>
+
+<section class="section gray">
+    <h2>🗂 Browse by Category</h2>
+    <div class="category-grid">
+        <a class="category-card" href="/adventure">Adventure</a>
+        <a class="category-card" href="/selfhelp">Self Help</a>
+        <a class="category-card" href="/finance">Finance</a>
+        <a class="category-card" href="/business">Business</a>
+        <a class="category-card" href="/biography">Biography</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>🆕 New Arrivals</h2>
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <h3>Deep Work</h3>
+            <p>₹420</p>
+        </div>
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <h3>Ikigai</h3>
+            <p>₹380</p>
+        </div>
+    </div>
+</section>
+
+<section class="section gray">
+    <h2>📈 Trending Now</h2>
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <h3>Psychology of Money</h3>
+            <p>₹450</p>
+        </div>
+        <div class="book-card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <h3>Think Like a Monk</h3>
+            <p>₹399</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 BookVerse. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
+

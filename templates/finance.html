@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adventure Books | BookVerse</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='book.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <h1 class="logo">📚 BookVerse</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Bestsellers</a>
+        <a href="#">New Arrivals</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Category Header -->
+<section class="category-header">
+    <h2>🧭 Finance Books</h2>
+    <p>Best Person Finance Books, Investors & Venture Capitalist</p>
+</section>
+
+<div class="adventure-page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+  <h3>Filters</h3>
+
+  <form method="GET" action="/finance">
+
+    <!-- Search -->
+    <input type="text" name="search" placeholder="Search books..." 
+           value="{{ request.args.get('search', '') }}" />
+
+    <!-- Sort -->
+    <div class="filter-group">
+      <h4>Sort By</h4>
+      <select name="sort">
+        <option value="">Select</option>
+        <option value="latest">Latest</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
+
+    <button type="submit">Apply Filters</button>
+
+  </form>
+</aside>
+
+
+  <section class="booksection">
+    {% for book in books %}
+        <div class="bookcontainer">
+        <div class="book">
+            <img src="{{ book[4] }}">
+        </div>
+        <div class="bookcontent">
+            <h3 class="bookname">{{ book[1] }}</h3>
+            <p class="bookauthor">{{ book[2] }}</p>
+            <p class="bookprice">₹{{ book[3] }}</p>
+            <a href="/description/{{ book[0] }}" class="viewdetails">View Details</a>
+        </div>
+        </div>
+        {% endfor %}
+</section>
+
+
+</div>
+</section>
+
+
+</body>
+</html>

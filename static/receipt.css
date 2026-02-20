@@ -1,0 +1,110 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page background */
+body {
+    background: linear-gradient(135deg, #eef2f7, #dbe6f6);
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+/* Receipt Card */
+body > * {
+    max-width: 650px;
+}
+
+/* Main Receipt Container */
+body {
+    align-items: flex-start;
+}
+
+h2, h3, p {
+    max-width: 650px;
+}
+
+/* Card Wrapper */
+body {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Receipt box */
+body::before {
+    content: "";
+    position: absolute;
+}
+
+/* Create a card layout */
+body {
+    position: relative;
+}
+
+h2, h3, p {
+    width: 650px;
+    background: white;
+    padding: 12px 25px;
+}
+
+/* First heading bigger */
+h2 {
+    font-size: 28px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+    background: #2c3e50;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Section spacing */
+h3 {
+    margin-top: 10px;
+    background: #f7f9fc;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Remove border from last paragraph */
+p:last-of-type {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Bold labels */
+strong {
+    color: #2c3e50;
+}
+
+/* Highlight total amount */
+p:has(strong:contains("Total")) {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover subtle effect */
+p:hover {
+    background: #f9fbff;
+}
+
+/* Print styling */
+@media print {
+    body {
+        background: white;
+    }
+
+    h2, h3, p {
+        box-shadow: none;
+    }
+}
