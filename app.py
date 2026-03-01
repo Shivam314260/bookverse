@@ -2,7 +2,14 @@ from flask import Flask, request , Response ,session, url_for,redirect,render_te
 
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"
+
+# ✅ Use SECRET_KEY from Vercel environment
+app.secret_key = os.environ.get("SECRET_KEY")
+
+
+# ✅ Universal DB Connection (Neon / Vercel)
+def get_db_connection():
+    return psycopg2.connect(os.environ.get("DATABASE_URL"))
 
 
 @app.route('/')
