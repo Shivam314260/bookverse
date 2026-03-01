@@ -1,5 +1,6 @@
 from flask import Flask, request , Response ,session, url_for,redirect,render_template
-
+import psycopg2
+import os
 
 app = Flask(__name__)
 
